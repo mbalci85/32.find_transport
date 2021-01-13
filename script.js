@@ -12,3 +12,19 @@ const londonLocations = [
 	['London Bridge', 'tube', 'river boat'],
 	['Tower Bridge', 'tube', 'bus'],
 ];
+
+const findLocation = (arr, transport) => {
+	let res = [];
+	arr.map((loc) => {
+		if (loc.includes(transport)) {
+			res.push(loc[0]);
+		}
+	});
+	return res;
+};
+
+console.log(findLocation(londonLocations, 'tube'));
+console.log(findLocation(londonLocations, 'river boat'));
+console.log(findLocation(londonLocations, 'dlr'));
+console.log(findLocation(londonLocations, 'bus'));
+console.log(findLocation(londonLocations, 'air line'));
